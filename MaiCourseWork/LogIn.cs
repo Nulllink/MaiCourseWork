@@ -28,18 +28,27 @@ namespace MaiCourseWork
 
         private void LogInbtn_Click(object sender, EventArgs e)
         {
-            checking();
-            rolegiving();
-            MenuF mf = new MenuF(role);
-            mf.Show();
-            Hide();
+            if (rolegiving())
+            {
+                checking();
+                MenuF mf = new MenuF(role);
+                mf.Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("Введеный логин или пароль неверен");
+            }
         }
-        void rolegiving()
+        bool rolegiving()
         {
-            if(NameTB.Text == "root")
+            if(NameTB.Text == "root" && PassTB.Text == "root")
             {
                 role = 0;
+                return true;
             }
+
+            return false;
         }
         void checking()
         {
