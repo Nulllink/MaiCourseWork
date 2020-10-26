@@ -8,6 +8,7 @@ namespace MaiCourseWork
 {
     static class Program
     {
+        public static List<Form> lof = new List<Form>();
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -16,7 +17,8 @@ namespace MaiCourseWork
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            lof.Add(new LogIn());
+            Application.Run(lof[0]);
         }
     }
 }
