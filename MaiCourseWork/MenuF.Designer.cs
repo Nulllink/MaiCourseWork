@@ -32,11 +32,14 @@
             this.BtnSignOut = new System.Windows.Forms.Button();
             this.LAcName = new System.Windows.Forms.Label();
             this.CbDbMode = new System.Windows.Forms.CheckBox();
+            this.BtnPurch = new System.Windows.Forms.Button();
+            this.BtnSells = new System.Windows.Forms.Button();
+            this.BtnStock = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnExit
             // 
-            this.BtnExit.Location = new System.Drawing.Point(134, 352);
+            this.BtnExit.Location = new System.Drawing.Point(119, 148);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(75, 23);
             this.BtnExit.TabIndex = 0;
@@ -75,11 +78,41 @@
             this.CbDbMode.Visible = false;
             this.CbDbMode.CheckedChanged += new System.EventHandler(this.CbDbMode_CheckedChanged);
             // 
+            // BtnPurch
+            // 
+            this.BtnPurch.Location = new System.Drawing.Point(22, 55);
+            this.BtnPurch.Name = "BtnPurch";
+            this.BtnPurch.Size = new System.Drawing.Size(75, 23);
+            this.BtnPurch.TabIndex = 4;
+            this.BtnPurch.Text = "Закупки";
+            this.BtnPurch.UseVisualStyleBackColor = true;
+            // 
+            // BtnSells
+            // 
+            this.BtnSells.Location = new System.Drawing.Point(119, 55);
+            this.BtnSells.Name = "BtnSells";
+            this.BtnSells.Size = new System.Drawing.Size(75, 23);
+            this.BtnSells.TabIndex = 5;
+            this.BtnSells.Text = "Продажи";
+            this.BtnSells.UseVisualStyleBackColor = true;
+            // 
+            // BtnStock
+            // 
+            this.BtnStock.Location = new System.Drawing.Point(217, 55);
+            this.BtnStock.Name = "BtnStock";
+            this.BtnStock.Size = new System.Drawing.Size(75, 23);
+            this.BtnStock.TabIndex = 6;
+            this.BtnStock.Text = "Склад";
+            this.BtnStock.UseVisualStyleBackColor = true;
+            // 
             // MenuF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 450);
+            this.ClientSize = new System.Drawing.Size(330, 196);
+            this.Controls.Add(this.BtnStock);
+            this.Controls.Add(this.BtnSells);
+            this.Controls.Add(this.BtnPurch);
             this.Controls.Add(this.CbDbMode);
             this.Controls.Add(this.LAcName);
             this.Controls.Add(this.BtnSignOut);
@@ -97,5 +130,8 @@
         private System.Windows.Forms.Button BtnSignOut;
         private System.Windows.Forms.Label LAcName;
         private System.Windows.Forms.CheckBox CbDbMode;
+        private System.Windows.Forms.Button BtnPurch;
+        private System.Windows.Forms.Button BtnSells;
+        private System.Windows.Forms.Button BtnStock;
     }
 }
