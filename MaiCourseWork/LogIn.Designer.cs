@@ -1,6 +1,6 @@
 ﻿namespace MaiCourseWork
 {
-    partial class LogIn
+    partial class FrmLogIn
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,78 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.NameTB = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.PassTB = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.LogInbtn = new System.Windows.Forms.Button();
-            this.RemMeChB = new System.Windows.Forms.CheckBox();
+            this.TbName = new System.Windows.Forms.TextBox();
+            this.LName = new System.Windows.Forms.Label();
+            this.TbPass = new System.Windows.Forms.TextBox();
+            this.LPassword = new System.Windows.Forms.Label();
+            this.BtnLogIn = new System.Windows.Forms.Button();
+            this.CbRemMe = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // NameTB
+            // TbName
             // 
-            this.NameTB.Location = new System.Drawing.Point(27, 53);
-            this.NameTB.Name = "NameTB";
-            this.NameTB.Size = new System.Drawing.Size(283, 20);
-            this.NameTB.TabIndex = 0;
+            this.TbName.Location = new System.Drawing.Point(27, 53);
+            this.TbName.Name = "TbName";
+            this.TbName.Size = new System.Drawing.Size(283, 20);
+            this.TbName.TabIndex = 0;
             // 
-            // label1
+            // LName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Name";
+            this.LName.AutoSize = true;
+            this.LName.Location = new System.Drawing.Point(27, 34);
+            this.LName.Name = "LName";
+            this.LName.Size = new System.Drawing.Size(35, 13);
+            this.LName.TabIndex = 1;
+            this.LName.Text = "Name";
             // 
-            // PassTB
+            // TbPass
             // 
-            this.PassTB.Location = new System.Drawing.Point(27, 110);
-            this.PassTB.Name = "PassTB";
-            this.PassTB.Size = new System.Drawing.Size(283, 20);
-            this.PassTB.TabIndex = 2;
+            this.TbPass.Location = new System.Drawing.Point(27, 110);
+            this.TbPass.Name = "TbPass";
+            this.TbPass.Size = new System.Drawing.Size(283, 20);
+            this.TbPass.TabIndex = 2;
             // 
-            // label2
+            // LPassword
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Password";
+            this.LPassword.AutoSize = true;
+            this.LPassword.Location = new System.Drawing.Point(27, 94);
+            this.LPassword.Name = "LPassword";
+            this.LPassword.Size = new System.Drawing.Size(53, 13);
+            this.LPassword.TabIndex = 3;
+            this.LPassword.Text = "Password";
             // 
-            // LogInbtn
+            // BtnLogIn
             // 
-            this.LogInbtn.Location = new System.Drawing.Point(242, 151);
-            this.LogInbtn.Name = "LogInbtn";
-            this.LogInbtn.Size = new System.Drawing.Size(75, 23);
-            this.LogInbtn.TabIndex = 4;
-            this.LogInbtn.Text = "Log In";
-            this.LogInbtn.UseVisualStyleBackColor = true;
-            this.LogInbtn.Click += new System.EventHandler(this.LogInbtn_Click);
+            this.BtnLogIn.Location = new System.Drawing.Point(242, 151);
+            this.BtnLogIn.Name = "BtnLogIn";
+            this.BtnLogIn.Size = new System.Drawing.Size(75, 23);
+            this.BtnLogIn.TabIndex = 4;
+            this.BtnLogIn.Text = "Log In";
+            this.BtnLogIn.UseVisualStyleBackColor = true;
+            this.BtnLogIn.Click += new System.EventHandler(this.LogInbtn_Click);
             // 
-            // RemMeChB
+            // CbRemMe
             // 
-            this.RemMeChB.AutoSize = true;
-            this.RemMeChB.Location = new System.Drawing.Point(27, 151);
-            this.RemMeChB.Name = "RemMeChB";
-            this.RemMeChB.Size = new System.Drawing.Size(95, 17);
-            this.RemMeChB.TabIndex = 5;
-            this.RemMeChB.Text = "Remember Me";
-            this.RemMeChB.UseVisualStyleBackColor = true;
+            this.CbRemMe.AutoSize = true;
+            this.CbRemMe.Location = new System.Drawing.Point(27, 151);
+            this.CbRemMe.Name = "CbRemMe";
+            this.CbRemMe.Size = new System.Drawing.Size(95, 17);
+            this.CbRemMe.TabIndex = 5;
+            this.CbRemMe.Text = "Remember Me";
+            this.CbRemMe.UseVisualStyleBackColor = true;
             // 
-            // LogIn
+            // FrmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(342, 188);
-            this.Controls.Add(this.RemMeChB);
-            this.Controls.Add(this.LogInbtn);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.PassTB);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.NameTB);
-            this.Name = "LogIn";
+            this.Controls.Add(this.CbRemMe);
+            this.Controls.Add(this.BtnLogIn);
+            this.Controls.Add(this.LPassword);
+            this.Controls.Add(this.TbPass);
+            this.Controls.Add(this.LName);
+            this.Controls.Add(this.TbName);
+            this.Name = "FrmLogIn";
             this.Text = "Log In";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -108,12 +108,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox NameTB;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox PassTB;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button LogInbtn;
-        private System.Windows.Forms.CheckBox RemMeChB;
+        private System.Windows.Forms.TextBox TbName;
+        private System.Windows.Forms.Label LName;
+        private System.Windows.Forms.TextBox TbPass;
+        private System.Windows.Forms.Label LPassword;
+        private System.Windows.Forms.Button BtnLogIn;
+        private System.Windows.Forms.CheckBox CbRemMe;
     }
 }
 

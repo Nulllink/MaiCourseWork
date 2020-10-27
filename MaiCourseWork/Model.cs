@@ -27,14 +27,4 @@ namespace MaiCourseWork
         int amount;
         int price;
     }
-    class Roles
-    {
-        string name;
-        string password;
-        int role;
-        public Roles()
-        {
-
-        }
-    }
 }

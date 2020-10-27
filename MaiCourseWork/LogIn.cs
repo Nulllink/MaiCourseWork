@@ -11,18 +11,23 @@ using System.IO;
 
 namespace MaiCourseWork
 {
-    public partial class LogIn : Form
+    public partial class FrmLogIn : Form
     {
-        public int role;
-        public LogIn()
+        int role;
+        string name;
+        public FrmLogIn()
         {
             InitializeComponent();
-            string[] lines = File.ReadAllLines("Options.txt");
+            if (!File.Exists(Program.optionpath))
+            {
+                Program.OptionFile();
+            }
+            string[] lines = File.ReadAllLines(Program.optionpath);
             if (bool.Parse(lines[0].Substring(lines[0].IndexOf(':')+1)))
             {
-                NameTB.Text = lines[1].Remove(lines[1].IndexOf(' '));
-                PassTB.Text = lines[1].Substring(lines[1].IndexOf(' ')+1);
-                RemMeChB.Checked = true;
+                TbName.Text = lines[1].Remove(lines[1].IndexOf(' '));
+                TbPass.Text = lines[1].Substring(lines[1].IndexOf(' ')+1);
+                CbRemMe.Checked = true;
             }
         }
 
@@ -31,7 +36,7 @@ namespace MaiCourseWork
             if (rolegiving())
             {
                 checking();
-                MenuF mf = new MenuF(role);
+                MenuF mf = new MenuF(role,name);
                 mf.Show();
                 Hide();
             }
@@ -42,9 +47,10 @@ namespace MaiCourseWork
         }
         bool rolegiving()
         {
-            if(NameTB.Text == "root" && PassTB.Text == "root")
+            if(TbName.Text == "root" && TbPass.Text == "root")
             {
                 role = 0;
+                name = "root";
                 return true;
             }
 
@@ -52,15 +58,15 @@ namespace MaiCourseWork
         }
         void checking()
         {
-            if (RemMeChB.Checked)
+            if (CbRemMe.Checked)
             {
-                string[] lines = File.ReadAllLines("Options.txt");
-                lines[0] = $"{lines[0].Remove(lines[0].IndexOf(':'))}:{RemMeChB.Checked.ToString()}";
-                if (RemMeChB.Checked)
+                string[] lines = File.ReadAllLines(Program.optionpath);
+                lines[0] = $"{lines[0].Remove(lines[0].IndexOf(':'))}:{CbRemMe.Checked}";
+                if (CbRemMe.Checked)
                 {
-                    lines[1] = $"{NameTB.Text} {PassTB.Text}";
+                    lines[1] = $"{TbName.Text} {TbPass.Text}";
                 }
-                File.WriteAllLines("Options.txt", lines);
+                File.WriteAllLines(Program.optionpath, lines);
             }
         }
     }
