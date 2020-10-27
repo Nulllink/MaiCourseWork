@@ -86,6 +86,7 @@
             this.BtnPurch.TabIndex = 4;
             this.BtnPurch.Text = "Закупки";
             this.BtnPurch.UseVisualStyleBackColor = true;
+            this.BtnPurch.Click += new System.EventHandler(this.BtnPurch_Click);
             // 
             // BtnSells
             // 
@@ -95,6 +96,7 @@
             this.BtnSells.TabIndex = 5;
             this.BtnSells.Text = "Продажи";
             this.BtnSells.UseVisualStyleBackColor = true;
+            this.BtnSells.Click += new System.EventHandler(this.BtnSells_Click);
             // 
             // BtnStock
             // 
@@ -104,6 +106,7 @@
             this.BtnStock.TabIndex = 6;
             this.BtnStock.Text = "Склад";
             this.BtnStock.UseVisualStyleBackColor = true;
+            this.BtnStock.Click += new System.EventHandler(this.BtnStock_Click);
             // 
             // MenuF
             // 

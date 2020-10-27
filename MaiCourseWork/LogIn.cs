@@ -14,7 +14,6 @@ namespace MaiCourseWork
     public partial class FrmLogIn : Form
     {
         int role;
-        string name;
         public FrmLogIn()
         {
             InitializeComponent();
@@ -36,7 +35,7 @@ namespace MaiCourseWork
             if (rolegiving())
             {
                 checking();
-                MenuF mf = new MenuF(role,name);
+                MenuF mf = new MenuF(role,TbName.Text);
                 mf.Show();
                 Hide();
             }
@@ -50,7 +49,6 @@ namespace MaiCourseWork
             if(TbName.Text == "root" && TbPass.Text == "root")
             {
                 role = 0;
-                name = "root";
                 return true;
             }
 

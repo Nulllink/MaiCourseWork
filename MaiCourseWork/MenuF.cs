@@ -55,5 +55,23 @@ namespace MaiCourseWork
             lines[2] = $"{lines[2].Remove(lines[2].IndexOf(':'))}:{CbDbMode.Checked}";
             File.WriteAllLines(Program.optionpath, lines);
         }
+
+        private void BtnPurch_Click(object sender, EventArgs e)
+        {
+            Tables t = new Tables(0,CbDbMode.Checked);
+            t.Show();
+        }
+
+        private void BtnSells_Click(object sender, EventArgs e)
+        {
+            Tables t = new Tables(1, CbDbMode.Checked);
+            t.Show();
+        }
+
+        private void BtnStock_Click(object sender, EventArgs e)
+        {
+            Tables t = new Tables(2, CbDbMode.Checked);
+            t.Show();
+        }
     }
 }
