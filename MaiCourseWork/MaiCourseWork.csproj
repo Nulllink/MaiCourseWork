@@ -58,7 +58,6 @@
     <Compile Include="MenuF.Designer.cs">
       <DependentUpon>MenuF.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tables.cs">
